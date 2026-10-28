@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzas Maggic · Guerrero Negro, B.C.S.</title>
+<meta name="description" content="Pizzas horneadas, pastas y baguettes en Guerrero Negro. Abierto todos los días de 2:00 a 10:00 p. m. Llama al 615 157 2647.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Karla:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rojo:#B8321E; --noche:#231B19; --queso:#F6E7C1; --albahaca:#3F7A3C; --papel:#FFFBF2; --tinta:#2A1D1A;
+  --display:"Bowlby One","Arial Black","Impact",sans-serif;
+  --texto:"Karla","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--texto);color:var(--tinta);background:var(--papel);line-height:1.6;font-size:1.0625rem;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--queso);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+.hero{background:var(--rojo);color:#fff;text-align:center;padding:2.5rem 0 3.25rem}
+/* el PNG trae márgenes transparentes: se recorta solo con CSS, el archivo no se toca */
+.logo{width:min(24rem,88vw);aspect-ratio:1208/1014;overflow:hidden;margin:0 auto 1.25rem}
+.logo img{display:block;width:calc(100% * 1505 / 1208);max-width:none;height:auto;margin-left:calc(-100% * 219 / 1208)}
+.hero p{margin:0 auto 1.75rem;max-width:30rem;font-size:1.2rem}
+.botones{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--queso)}
+.btn.llamar{background:var(--queso);color:var(--noche)}
+.btn.mapa{background:transparent;color:#fff}
+.btn:hover{filter:brightness(1.08)}
+
+section{padding:3rem 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.15;margin:0 0 1.25rem;color:var(--rojo)}
+.visita{display:grid;gap:2rem;align-items:center}
+.visita img{width:100%;height:auto;display:block;border-radius:1rem;max-height:30rem;object-fit:cover}
+.dato{margin-bottom:1.25rem}
+.dato h3{margin:0 0 .2rem;font-size:1rem;font-weight:800;color:var(--albahaca)}
+.dato p{margin:0}
+.grande{font-size:1.3rem;font-weight:800}
+@media (min-width:48rem){ .visita{grid-template-columns:1fr 1fr;gap:3rem} }
+
+.menu{background:var(--queso)}
+.grupos{display:grid;gap:1.75rem 2.5rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.grupos h3{font-family:var(--display);font-weight:400;font-size:1.15rem;color:var(--rojo);margin:0 0 .4rem;padding-bottom:.4rem;border-bottom:3px solid var(--albahaca)}
+.grupos p{margin:0}
+
+.resena{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.nota{font-family:var(--display);font-size:3rem;color:var(--rojo);line-height:1}
+
+footer{background:var(--noche);color:#EAD9CC;text-align:center;padding:1.75rem 0;font-size:.95rem}
+footer a{color:var(--queso)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="logo"><img src="logo.png" alt="Logo de Pizzas Maggic" width="1505" height="1045"></div>
+    <p>Pizzas horneadas, pastas y baguettes en Guerrero Negro. Abierto todos los días de 2:00 a 10:00 p. m.</p>
+    <div class="botones">
+      <a class="btn llamar" href="tel:+526151572647">Llamar al 615 157 2647</a>
+      <a class="btn mapa" href="https://www.google.com/maps/search/?api=1&query=Pizzas+Maggic+Guerrero+Negro" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="visitanos">
+    <div class="wrap visita">
+      <img src="pizza.jpg" alt="Pizza de Pizzas Maggic con pepperoni, jamón, aceitunas, champiñones y pimiento" width="900" height="1137">
+      <div>
+        <h2>Visítanos</h2>
+        <div class="dato">
+          <h3>Horario</h3>
+          <p class="grande">Lunes a domingo</p>
+          <p>2:00 p. m. a 10:00 p. m.</p>
+        </div>
+        <div class="dato">
+          <h3>Teléfono</h3>
+          <p class="grande"><a href="tel:+526151572647">615 157 2647</a></p>
+        </div>
+        <div class="dato">
+          <h3>Dirección</h3>
+          <p>Carretera a Guerrero Negro, col. Marcelo Rubio Ruiz<br>23940 Guerrero Negro, B.C.S.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <h2>Menú</h2>
+      <div class="grupos">
+        <div>
+          <h3>Especialidad de la casa</h3>
+          <p>Una amplia variedad de pizzas horneadas con combinaciones clásicas de carnes y quesos.</p>
+        </div>
+        <div>
+          <h3>Pastas</h3>
+          <p>Pastas preparadas al momento, con opciones vegetarianas.</p>
+        </div>
+        <div>
+          <h3>Baguettes y sándwiches</h3>
+          <p>Panes rellenos, ideales para una comida individual e informal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones">
+    <div class="wrap">
+      <h2>Lo que dicen de nosotros</h2>
+      <div class="resena">
+        <div class="nota">4.5</div>
+        <p>Calificación en Google Maps.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Pizzas Maggic · Guerrero Negro, B.C.S. ·
+    <a href="tel:+526151572647">615 157 2647</a>
+  </div>
+</footer>
+
+</body>
+</html>
